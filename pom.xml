@@ -14,6 +14,13 @@
         <module>store</module>
         <module>consoleApp</module>
     </modules>
+    <dependencies>
+        <dependency>
+            <groupId>com.android.tools.external.lombok</groupId>
+            <artifactId>lombok-ast</artifactId>
+            <version>0.2.3</version>
+        </dependency>
+    </dependencies>
 
     <properties>
         <maven.test.skip>true</maven.test.skip>

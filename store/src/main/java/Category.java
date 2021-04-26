@@ -1,32 +1,21 @@
-import java.util.ArrayList;
-import java.util.List;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+@Getter
+@Setter
+@NoArgsConstructor
 public class Category {
 
-    protected String nameCategory;
-    public ArrayList<String> list;
+    protected String categoryName;
+//    private Set<Item> categoryItem;
 
-    Category(String nameCategory) {
-        this.nameCategory = nameCategory;
-    }
-
-    public ArrayList<String> addInListCategory(String nameCategory) {
-        list = null;
-        list.add(nameCategory);
-        return  list;
-    }
-
-    public String getNameCategory() {
-        return nameCategory;
-    }
-
-    public String setNameCategory(String nameCategory) {
-        this.nameCategory = nameCategory;
-        return nameCategory;
+    public Category(String categoryName) {
+        this.categoryName = categoryName;
     }
 
     @Override
     public String toString() {
-        return "***" + nameCategory + "***";
+        return "***" + categoryName + "***";
     }
 }
