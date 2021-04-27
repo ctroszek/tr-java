@@ -1,5 +1,4 @@
 import org.apache.commons.lang3.StringUtils;
-
 import java.util.List;
 
 class Fruit extends Category{

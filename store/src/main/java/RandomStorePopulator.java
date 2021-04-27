@@ -24,6 +24,7 @@ public class RandomStorePopulator {
     public List<Product> getProduct(Category category) {
         List<Product> products = new ArrayList<>();
         for (int i = 0; i < 5; i++) {
+            category.getCategoryName();
             if (category instanceof Dish) {
                 products.add(new Product(getFaker().dish(), randomNumber(30), randomNumber(30)));
             } else if (category instanceof Fruit) {
