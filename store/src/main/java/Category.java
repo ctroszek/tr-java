@@ -8,7 +8,6 @@ import lombok.Setter;
 public class Category {
 
     protected String categoryName;
-//    private Set<Item> categoryItem;
 
     public Category(String categoryName) {
         this.categoryName = categoryName;

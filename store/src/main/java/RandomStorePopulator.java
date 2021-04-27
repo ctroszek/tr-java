@@ -17,7 +17,7 @@ public class RandomStorePopulator {
 
     public List<Category> getCategory() {
         List<Category> categories = new ArrayList<>();
-        categories.add(new Dish("Dish", getProduct(new Dish())));
+        categories.add(new Dish("Dish", getProduct()));
         categories.add(new Fruit("Fruit", getProduct(new Fruit())));
         return categories;
     }
