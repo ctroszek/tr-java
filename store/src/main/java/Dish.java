@@ -5,16 +5,17 @@ import java.util.List;
 
 public class Dish extends Category{
 
-    private String dish;
-    public List<Product> products = new ArrayList<>();
+    private List<Product> products;
 
-    public Dish(String dish, List<Product> products) {
-        this.dish = dish;
+    public Dish(List<Product> products) {
+        setCategoryName("Dish");
         this.products = products;
+    }
+    Dish() {
     }
 
     @Override
     public String toString() {
-        return "***Dish***\n" + StringUtils.join(products, "- ");
+        return "*** " + getCategoryName() + " ***\n\n" + StringUtils.join(products, "- ");
     }
 }

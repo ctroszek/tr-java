@@ -3,18 +3,18 @@ import java.util.List;
 
 class Fruit extends Category{
 
-    private String fruit;
-    public List<Product> products;
+    private List<Product> products;
 
-    public Fruit(String fruit, List<Product> products) {
-        this.fruit = fruit;
+    public Fruit(List<Product> products) {
+        setCategoryName("Fruit");
         this.products = products;
     }
-    public Fruit() {
+
+    Fruit() {
     }
 
     @Override
     public String toString() {
-        return "\n***Fruit***\n" + StringUtils.join(products, "- ");
+        return "\n*** " + getCategoryName() + " ***\n\n" + StringUtils.join(products, "- ");
     }
 }
