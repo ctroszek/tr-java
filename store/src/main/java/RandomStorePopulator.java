@@ -5,8 +5,6 @@ import java.util.*;
 public class RandomStorePopulator {
     Faker faker = new Faker();
     Random random = new Random();
-    Dish dish = new Dish();
-    Fruit fruit = new Fruit();
 
     public Food getFaker() {
         return faker.food();
@@ -18,20 +16,24 @@ public class RandomStorePopulator {
 
     public List<Category> getCategory() {
         List<Category> categories = new ArrayList<>();
-        categories.add(new Dish(getProduct(dish)));
-        categories.add(new Fruit(getProduct(fruit)));
+        categories.add(new Dish(getDish()));
+        categories.add(new Fruit(getFruit()));
         return categories;
     }
 
-    public List<Product> getProduct(Category category) {
-        List<Product> products = new ArrayList<>();
+    public List<Product> getDish() {
+        List<Product> dishs = new ArrayList<>();
         for (int i = 0; i < 5; i++) {
-            if (category instanceof Dish) {
-                products.add(new Product(getFaker().dish(), randomNumber(30), randomNumber(30)));
-            } else if (category instanceof Fruit) {
-                products.add(new Product(getFaker().fruit(), randomNumber(30), randomNumber(30)));
-            }
+            dishs.add(new Product(getFaker().dish(), randomNumber(30), randomNumber(30)));
         }
-        return products;
+        return dishs;
+    }
+
+    public List<Product> getFruit() {
+        List<Product> fruits = new ArrayList<>();
+        for (int i = 0; i < 5; i++) {
+            fruits.add(new Product(getFaker().fruit(), randomNumber(30), randomNumber(30)));
+        }
+        return fruits;
     }
 }

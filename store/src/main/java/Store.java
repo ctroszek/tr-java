@@ -13,8 +13,7 @@ public class Store {
     }
 
     public void viewStore() {
-        System.out.println(StringUtils.join(categories, " "));
-    }
+        System.out.println(StringUtils.join(categories, " "));    }
 
 
 }
