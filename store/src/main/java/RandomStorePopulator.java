@@ -16,24 +16,18 @@ public class RandomStorePopulator {
 
     public List<Category> getCategory() {
         List<Category> categories = new ArrayList<>();
-        categories.add(new Dish(getDish()));
-        categories.add(new Fruit(getFruit()));
+        for (int i = 0; i <= 5; i++){
+            categories.add(new Dish(getProduct(getFaker().dish())));
+        }
+        for (int i = 0; i <= 5; i++){
+            categories.add(new Fruit(getProduct(getFaker().fruit())));
+        }
         return categories;
     }
 
-    public List<Product> getDish() {
-        List<Product> dishs = new ArrayList<>();
-        for (int i = 0; i < 5; i++) {
-            dishs.add(new Product(getFaker().dish(), randomNumber(30), randomNumber(30)));
-        }
-        return dishs;
-    }
-
-    public List<Product> getFruit() {
-        List<Product> fruits = new ArrayList<>();
-        for (int i = 0; i < 5; i++) {
-            fruits.add(new Product(getFaker().fruit(), randomNumber(30), randomNumber(30)));
-        }
-        return fruits;
+    public List<Product> getProduct(String name) {
+        List<Product> products = new ArrayList<>();
+        products.add(new Product(name, randomNumber(30), randomNumber(30)));
+        return products;
     }
 }

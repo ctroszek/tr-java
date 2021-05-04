@@ -1,5 +1,3 @@
-import java.util.Random;
-
 public class Product {
 
     private int rate;
@@ -38,6 +36,6 @@ public class Product {
 
     @Override
     public String toString() {
-        return  name + ' ' + price + "$" + ", rate= " + rate + '\n';
+        return "- " + name + ' ' + price + "$" + ", rate= " + rate + '\n';
     }
 }
