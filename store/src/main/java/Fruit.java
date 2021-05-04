@@ -11,8 +11,8 @@ class Fruit extends Category{
     }
     Fruit(){}
 
-//    @Override
-//    public String toString() {
-//        return "\n" + category + "\n" + StringUtils.join(products, "");
-//    }
+    @Override
+    public String toString() {
+        return "\n" + category + "\n" + StringUtils.join(products, "");
+    }
 }

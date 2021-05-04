@@ -12,8 +12,8 @@ public class Dish extends Category{
     }
 
     Dish(){}
-//    @Override
-//    public String toString() {
-//        return category + "\n" + StringUtils.join(products, "");
-//    }
+    @Override
+    public String toString() {
+        return category + "\n" + StringUtils.join(products, "");
+    }
 }
