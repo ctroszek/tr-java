@@ -5,11 +5,12 @@ import java.util.List;
 
 public class Store {
 
-    public RandomStorePopulator populator = new RandomStorePopulator();
-    public List<Category> categories;
+    private RandomStorePopulator populator = new RandomStorePopulator();
+    private List<Category> categories;
 
     public Store() {
-        categories = populator.getCategory();
+//        categories = populator.getCategories();
+        categories = new Category().addProductsToCategories();
     }
 
     public void viewStore() {
