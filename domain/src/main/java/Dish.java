@@ -14,7 +14,7 @@ public class Dish extends Category{
 
     @Override
     public String toString() {
-        return StringUtils.join("*** "+ categoryName + " ***\n", " ")
+        return StringUtils.join("        *** "+ categoryName + " ***\n", " ")
                 + StringUtils.join(products, " ");
     }
 }
