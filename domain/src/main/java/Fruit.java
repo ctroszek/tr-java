@@ -1,3 +1,5 @@
+import org.apache.commons.lang3.StringUtils;
+
 import java.util.List;
 
 class Fruit extends Category{
@@ -10,8 +12,9 @@ class Fruit extends Category{
         this.products = products;
     }
 
-//    @Override
-//    public String toString() {
-//        return categoryName + "\n" + StringUtils.join(products, "");
-//    }
+    @Override
+    public String toString() {
+        return StringUtils.join("*** "+ categoryName + " ***\n", " ")
+                + StringUtils.join(products, " ");
+    }
 }

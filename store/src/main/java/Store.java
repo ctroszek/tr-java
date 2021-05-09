@@ -4,15 +4,14 @@ import java.util.List;
 
 
 public class Store {
-
-    private RandomStorePopulator populator = new RandomStorePopulator();
     private List<Category> categories;
 
     public Store() {
-//        categories = populator.getCategories();
-        categories = new Category().addProductsToCategories();
+        Category allProducts = new Category();
+        categories = allProducts.addProductsInCategory();
     }
 
     public void viewStore() {
-        System.out.println(StringUtils.join(categories, " "));    }
+        System.out.println(StringUtils.join(categories, " "));
+      }
 }

@@ -14,18 +14,17 @@ public class Category {
     private String categoryName;
     private Product products;
 
-
     public Category(String categoryName) {
         this.categoryName = categoryName;
     }
 
-//    ATTENTION!!! DON'T REPEAT PLS!!!
-    public List<Category> addProductsToCategories(){
-        RandomStorePopulator randomStore = new RandomStorePopulator();
+    public List<Category> addProductsInCategory(){
         List<Category> lists = new ArrayList<>();
-        String nameProducts = randomStore.getFaker().dish();
-        List<Product> products1 = randomStore.getProducts(nameProducts);
-        lists.add(randomStore.getCategories(products1));
+        RandomStorePopulator randomStore = new RandomStorePopulator();
+        Dish dish = new Dish(randomStore.listOfProducts("dish"));
+        Fruit fruit = new Fruit(randomStore.listOfProducts("fruit"));
+        lists.add(dish);
+        lists.add(fruit);
         return lists;
     }
 

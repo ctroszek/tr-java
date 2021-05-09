@@ -1,8 +1,10 @@
+import org.apache.commons.lang3.StringUtils;
+
 import java.util.List;
 
 public class Dish extends Category{
 
-    private final List<Product> products;
+    private List<Product> products;
     private static String categoryName;
 
     public Dish(List<Product> products) {
@@ -10,9 +12,9 @@ public class Dish extends Category{
         this.products = products;
     }
 
-//    IN MY OPINION THIS METHOD MUST BE WRITTEN IN CATEGORY CLASS(IN CLASS FRUIT THE SAME CASE)
-//    @Override
-//    public String toString() {
-//        return categoryName + "\n" + StringUtils.join(products, "");
-//    }
+    @Override
+    public String toString() {
+        return StringUtils.join("*** "+ categoryName + " ***\n", " ")
+                + StringUtils.join(products, " ");
+    }
 }
