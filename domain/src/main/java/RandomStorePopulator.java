@@ -25,9 +25,9 @@ public class RandomStorePopulator {
     public List<Product> listOfProducts(String nameCategory){
         List<Product> productList = new ArrayList<>();
         for (int i = 0; i < 5; i++) {
-            if (nameCategory.equals("dish")){
+            if (nameCategory.equals("Dish")){
                 productList.add(getProduct(getFaker().dish()));
-            } else if (nameCategory.equals("fruit")) {
+            } else if (nameCategory.equals("Fruit")) {
                 productList.add(getProduct(getFaker().fruit()));
             }
         }

@@ -18,15 +18,15 @@ public class Category {
         this.categoryName = categoryName;
     }
 
-    public List<Category> addProductsInCategory(){
-        List<Category> lists = new ArrayList<>();
-        RandomStorePopulator randomStore = new RandomStorePopulator();
-        Dish dish = new Dish(randomStore.listOfProducts("dish"));
-        Fruit fruit = new Fruit(randomStore.listOfProducts("fruit"));
-        lists.add(dish);
-        lists.add(fruit);
-        return lists;
-    }
+//    public List<Category> addProductsInCategory(){
+//        List<Category> lists = new ArrayList<>();
+//        RandomStorePopulator randomStore = new RandomStorePopulator();
+//        Dish dish = new Dish(randomStore.listOfProducts("dish"));
+//        Fruit fruit = new Fruit(randomStore.listOfProducts("fruit"));
+//        lists.add(dish);
+//        lists.add(fruit);
+//        return lists;
+//    }
 
     @Override
     public String toString() {
