@@ -4,7 +4,7 @@ import java.util.List;
 
 class Fruit extends Category{
 
-    private List<Product> products;
+    public List<Product> products;
     private static String categoryName;
 
     public Fruit(List<Product> products) {

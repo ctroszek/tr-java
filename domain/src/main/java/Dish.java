@@ -4,8 +4,9 @@ import java.util.List;
 
 public class Dish extends Category{
 
-    private List<Product> products;
+    public List<Product> products;
     private static String categoryName;
+
 
     public Dish(List<Product> products) {
         categoryName = "Dish";

@@ -1,4 +1,4 @@
 target/
 .idea
-pretty-trainee.iml
+*.iml
 *.class

@@ -4,6 +4,7 @@ import lombok.Setter;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 @Getter
@@ -18,14 +19,14 @@ public class Category {
         this.categoryName = categoryName;
     }
 
-    public List<Category> addProductsInCategory(){
-        List<Category> lists = new ArrayList<>();
+    public void addProductsInCategory(){
+        List<Product> listPr = new ArrayList<>();
         RandomStorePopulator randomStore = new RandomStorePopulator();
-        Dish dish = new Dish(randomStore.listOfProducts("dish"));
-        Fruit fruit = new Fruit(randomStore.listOfProducts("fruit"));
-        lists.add(dish);
-        lists.add(fruit);
-        return lists;
+        Dish dish = new Dish(randomStore.listProducts("dish"));
+        Fruit fruit = new Fruit(randomStore.listProducts("fruit"));
+//        boolean b = Collections.addAll(dish,);
+        System.out.println(dish);
+
     }
 
     @Override
